@@ -1,4 +1,5 @@
 module.exports = function(app) {
+    console.log("进入routes index.js");
     app.get('', function(req, res) {
         res.redirect('/posts');
     });

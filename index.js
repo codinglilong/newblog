@@ -52,8 +52,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-
-
 // 正常请求的日志
 app.use(expressWinston.logger({
   transports: [
@@ -81,6 +79,7 @@ app.use(expressWinston.errorLogger({
 
 // 路由
 routes(app);
+console.log("进入index.js");
 // 监听端口，启动程序
 if (module.parent) {
   module.exports = app;
