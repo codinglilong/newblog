@@ -1,0 +1,28 @@
+<div class="ui grid">
+	<div class="four wide column"></div>
+	<div class="eight wide column">
+		<div class="ui borderless pagination menu grid">
+			<a class="item" href="?page=1&author=<%= author %>">
+				<i class="left arrow icon"></i>首页
+			</a>
+			<% if (!isFirstPage) { %>
+			    <a class="item" href="?page=<%= page-1 %>&author=<%= author %>">
+					上一页
+				</a>
+			 <% } %>
+			<% if (!isLastPage) { %>
+			    <a class="item" href="?page=<%= page+1 %>&author=<%= author %>">
+					下一页
+				</a>
+			 <% } %>
+			<a class="item" href="?page=<%= lastPage %>&author=<%= author %>">
+				末叶<i class="icon right arrow"></i>
+			</a>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.ui.pagination.menu a{
+		text-decoration: none;
+	}
+</style>
